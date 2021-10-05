@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="about.css">
+  <title>About</title>
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
+    integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+
+</head>
+
+<body>
+  <div class="top-bar">
+
+    <nav class="menu-items">
+      <div class="logo">
+        <a href="./index.html"><img id="logo-top" src="./Resources/logo.png" alt="Logo"></a>
+      </div>
+      <div class="openMenu"><i class="fas fa-bars"></i></div>
+      <ul class="links">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./partners.html">Partners &Associates</a></li>
+        <li><a href="./contact.html">Contacts</a></li>
+        <div class="closemenu"><i class="fas fa-times"></i></div>
+      </ul>
+    </nav>
+
+  </div>
+  <section class="about" id="a">
+    <h2 id="about-title">About</h2>
+
+    <p class="about-text">Founded in 2005, Vanderford & Ruiz (the “Firm”) started as a handful of experienced trial
+      and appellate attorneys who provided the highest quality legal services in the most cost-effective manner.
+      In the ensuing years, we have represented a variety of public entities, private corporations, and
+      individuals, including Certain Underwriters at Lloyd’s of London, Global Aerospace, the City of Los Angeles,
+      the County of Los Angeles, the Los Angeles Unified School Board, Metrolink, Chartis, and Bob Hope Airport.
+    </p>
+
+    <div class="lower-part-about">
+      <p class="lower-about-text">
+        The expertise we offer is tailored to the defense needs of public entities, insurance companies, and
+        private corporations. We have litigated cases all throughout California in the areas of construction;
+        employment; premises liability; insurance coverage; products liability; subrogation; and rail. Our
+        philosophy is to closely work with the client to achieve his or her goals. Many times, the size and
+        importance of a case justify preparing for eventual trial, with the idea that thorough preparation is
+        the best way to ensure a case resolves on the most advantageous terms for the client. When cases are not
+        as large, we work with the client to decide on an economical approach to achieve the desired results.
+        Most importantly, we are trial lawyers who relish the opportunity to defend our clients in front of a
+        jury, when necessary.<br><br>
+
+        The Firm has a close relationship with various insurance carriers. The Firm strives to provide exemplary
+        legal representation with an extremely competitive fee structure. In a nutshell, we treat our clients’
+        interests and resources as if they were our own.
+      </p>
+      <img class="lower-about-image" src="./Resources/aboutwall.jpg" alt="">
+    </div>
+
+
+    <footer>
+      <div class="location">
+        <h4>San Francisco | Los Angeles | Orange County</h4>
+      </div>
+      <p class="copyright">© 2021 VANDERFORD & RUIZ, LLP | SITE BY ANKIT RAJ SRIVASTAVA</p>
+    </footer>
+    <script>
+      const mainMenu = document.querySelector('.links');
+      const closeMenu = document.querySelector('.closemenu');
+      const openMenu = document.querySelector('.openMenu');
+
+      openMenu.addEventListener('click', Show);
+      closeMenu.addEventListener('click', Close);
+      function Show() {
+        mainMenu.style.display = 'flex';
+        mainMenu.style.top = '0';
+      }
+      function Close() {
+
+        mainMenu.style.top = '-120%';
+      }
+    </script>
+
+</body>
+
+</html>

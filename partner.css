@@ -1,0 +1,240 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #262626;
+}
+
+nav {
+  background: #262626;
+  height: 15vh;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+.logo {
+  float: left;
+  margin: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+nav ul {
+  list-style: none;
+  float: right;
+}
+nav ul li {
+  display: inline-block;
+}
+
+.links li a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  margin: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 25px;
+  padding-bottom: 5px;
+  font-size: 25px;
+  text-align: center;
+  display: block;
+}
+.links li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  height: 3px;
+  background: #1abc9c;
+  transition: 0.45s ease-out;
+}
+
+.links li a:hover::after {
+  left: 0;
+  width: 100%;
+}
+.part-container {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  padding-left: 5%;
+  padding-right: 5%;
+  grid-gap: 40px;
+  justify-content: center;
+  /* margin-left: 4%; */
+  margin-right: 4%;
+  padding-bottom: 50px;
+  width: 100%;
+  -webkit-box-shadow: 0 10px 10px -10px #000000;
+  -moz-box-shadow: 0 10px 10px -10px #000000;
+  box-shadow: 0 10px 10px -10px #000000;
+}
+.partners {
+  position: relative;
+  top: 15vh;
+  background-image: url("./Resources/associateback.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  padding-bottom: 50px;
+}
+.partners h2 {
+  color: #fff;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 30px;
+  padding-top: 40px;
+}
+.partner img {
+  height: 600px;
+  width: 300px;
+  border-radius: 10px;
+}
+.partner img:hover {
+  transform: scale(1.025);
+  transition: 0.3s ease-in;
+}
+.partner h3 {
+  color: #fff;
+  text-align: center;
+  font-size: 2rem;
+}
+.asociate h3 {
+  color: #fff;
+  text-align: center;
+  font-size: 2rem;
+}
+.Associate-container {
+  background-image: url("./Resources/associateback.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  top: 8vh;
+}
+.Associate-container h2 {
+  text-align: center;
+  font-size: 3rem;
+  text-decoration: underline;
+  color: #fff;
+  font-weight: 100;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+.associates {
+  display: grid;
+  grid-template-columns: 25% 25% 25%;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.asociate {
+  margin: 10px;
+}
+
+.asociate img {
+  height: 600px;
+  width: 350px;
+  border-radius: 10px;
+}
+.asociate img:hover {
+  transform: scale(1.025);
+  transition: 0.3s ease-in;
+}
+
+footer {
+  height: 20vh;
+  background-color: #262626;
+  position: relative;
+  left: 0;
+  top: 15vh;
+  margin: 0;
+}
+.location {
+  color: #fff;
+  padding-top: 3%;
+  font-size: 1.5rem;
+  text-align: center;
+  letter-spacing: 2px;
+}
+.copyright {
+  color: #fff;
+  text-align: center;
+  padding-top: 3%;
+  font-size: 1.15rem;
+  letter-spacing: 1.5px;
+}
+.openMenu{
+  color: #fff;
+  font-size: 2rem;
+  margin: 10px;
+  display: none;
+}
+.closemenu{
+  color: #fff;
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  #logo-top {
+    width: 100px;
+    padding-top: 10px;
+  }
+  .fas{
+    margin-top: 20px;
+  }
+  nav .links{
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 900;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #262626 ;
+    transition: top 1s ease;
+    display: none;
+  }
+  nav .links .closemenu{
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  .openMenu{
+    display: block;
+    position: fixed;
+    right: 10px;
+
+  }
+  .part-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .associates {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .asociate img {
+    width: 95vw;
+    height: 90vh;
+    padding: 3vw;
+  }
+
+  .partner img {
+    width: 90vw;
+    padding: 1vw;
+  }
+
+  .location{
+    font-size: 1.4rem;
+  }
+  .copyright {
+    font-size: 1rem;
+  }
+}
